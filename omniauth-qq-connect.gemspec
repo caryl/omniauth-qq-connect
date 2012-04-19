@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/omniauth-qq-connect/version', __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
+require "omniauth-qq-connect/version"
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Kai Chen"]
@@ -13,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "omniauth-qq-connect"
   gem.require_paths = ["lib"]
-  gem.version       = Omniauth::Qq::Connect::VERSION
+  gem.version       = OmniAuth::Qq::Connect::VERSION
 
   gem.add_dependency 'omniauth', '~> 1.0'
   gem.add_dependency 'omniauth-oauth2', '~> 1.0'
